@@ -58,6 +58,7 @@ func (d deck) saveToFile(fileName string) error {
 	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }
 
+
 //create deck from file saved
 func newDeckFromFile(fileName string) deck {
 	bs, err := ioutil.ReadFile(fileName)
@@ -69,6 +70,7 @@ func newDeckFromFile(fileName string) deck {
 	s := strings.Split(string(bs), ",")
 	return deck(s)
 }
+
 
 //it's use to shuffle a deck
 func (d deck) shuffle() {
