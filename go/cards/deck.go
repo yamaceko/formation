@@ -70,6 +70,7 @@ func newDeckFromFile(fileName string) deck {
 	return deck(s)
 }
 
+//it's use to shuffle a deck
 func (d deck) shuffle() {
 
 	source := rand.NewSource(time.Now().UnixNano())
